@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-</resources>
+<litepal>
+    <dbname value="fsc_wind"/>
+    <verison value="1"/>
+    <list>
+        <mapping class="com.fsc.fscwind.db.Province"/>
+        <mapping class="com.fsc.fscwind.db.City"/>
+        <mapping class="com.fsc.fscwind.db.County"/>
+    </list>
+</litepal>
