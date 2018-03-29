@@ -20,7 +20,6 @@ import com.fsc.fscwind.db.Province;
 import com.fsc.fscwind.util.HttpUtil;
 import com.fsc.fscwind.util.Utility;
 
-import org.litepal.LitePal;
 import org.litepal.crud.DataSupport;
 
 import java.io.IOException;
