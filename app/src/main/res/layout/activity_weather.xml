@@ -9,7 +9,7 @@
     tools:context="com.fsc.fscwind.WeatherActivity">
 
     <ScrollView
-        android:id="@+id/layout"
+        android:id="@+id/weather_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none"

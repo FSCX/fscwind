@@ -5,6 +5,8 @@ import android.text.TextUtils;
 import com.fsc.fscwind.db.City;
 import com.fsc.fscwind.db.County;
 import com.fsc.fscwind.db.Province;
+import com.fsc.fscwind.gson.Weather;
+import com.google.gson.Gson;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -75,5 +77,18 @@ public class Utility {
             }
         }
         return false;
+    }
+
+    //将返回的json数据解析成weather实体类
+    public static Weather handleWeatherResponse(String response){
+        try {
+            JSONObject jsonObject = new JSONObject(response);
+            JSONArray jsonArray = jsonObject.getJSONArray("heWeather");
+            String weatherContent = jsonArray.getJSONObject(0).toString();
+            return new Gson().fromJson(weatherContent, Weather.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
